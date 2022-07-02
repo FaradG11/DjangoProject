@@ -1,0 +1,32 @@
+{% extends 'coffeebeans/base.html' %}
+
+{% block title %}
+    {{ coffeebean.name }}
+{% endblock %}
+
+
+{% block body %}
+    <h1>{{coffeebean.name }}</h1>
+    <div>
+        <ul>
+            <li>Kind: {{ coffeebean.kind }}</li>
+            <li>Roasted level: {{ coffeebean.roast_level }}</li>
+        </ul>
+    <div>
+    <div>
+        <p> Price: {{coffeebean.price}} rub </p>
+        <strong> Short description:</strong>
+        <p>{{ coffeebean.description }}</p>
+    </div>
+    <div>
+        <strong> Brewing methods:</strong>
+        <ul>
+            {% for method in coffeebean.methods.all %}
+                <li>{{ method.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <a href="{% url 'coffeebeans:list' %}">Back to list</a>
+{% endblock %}
