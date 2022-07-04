@@ -1,0 +1,22 @@
+{% extends 'coffeebeans/base.html' %}
+
+{% block title %}
+    List of Coffee beans
+{% endblock %}
+
+
+{% block body %}
+    <h1>List Of Coffee Beans </h1>
+    <div>
+        <ul>
+            {% for coffee in object_list %}
+            <li>
+                <a href="{% url 'coffeebeans:details' coffee.id %}">
+                    {{ coffee.name }}
+                </a>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+{% endblock %}
