@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import index, details, CoffeeListView, CoffeeDetailView
+from .views import CoffeeListView, CoffeeDetailView
 
 app_name = "coffeebeans"
 
