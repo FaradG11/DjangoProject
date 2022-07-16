@@ -4,3 +4,4 @@ On the first stage of developing I have:
   - create a Django project
   - create Index page with list of items and Detail page
   - create models and add some data using admin page
+  - add tests
