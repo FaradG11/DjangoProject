@@ -29,16 +29,16 @@ class CoffeeTestCase(TestCase):
 class CoffeeDetailsTestCase(TestCase):
     def setUp(self):
         Coffeebean.objects.create(
-            pk="33",
             name="testcoffee",
             description="123",
             price=1000,
         )
 
     def test_details_view(self):
-        test_coffee_instance = Coffeebean.objects.get(pk="33")
+        test_coffee_instance = Coffeebean.objects.get(name="testcoffee")
+        pk_instance = test_coffee_instance.pk
         response = self.client.get(
-            reverse("coffeebeans:details", kwargs={'pk': '33'})
+            reverse("coffeebeans:details", kwargs={'pk': pk_instance})
         )
         self.assertEqual(response.status_code, 200)
         details_in_context = response.context["coffee_details"]
