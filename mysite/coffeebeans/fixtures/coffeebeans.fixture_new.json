@@ -1,0 +1,41 @@
+[
+  {
+    "model": "coffeebeans.coffeebean",
+    "pk": 1,
+    "fields": {
+      "name": "Espresso Brazil Minas Gerais",
+      "description": "",
+      "price": "1678.00",
+      "kind": 1,
+      "roast_level": 10,
+      "origin": 4,
+      "methods": [1, 2, 3, 4]
+      }
+    },
+    {
+      "model": "coffeebeans.coffeebean",
+      "pk": 2,
+      "fields": {
+        "name": "Espresso Ethiopia Sidamo",
+        "description": "",
+        "price": "1800.00",
+        "kind": 1,
+        "roast_level": 10,
+        "origin": 5,
+        "methods": [2, 4]
+       }
+    },
+    {
+      "model": "coffeebeans.coffeebean",
+      "pk": 3,
+      "fields": {
+        "name": "Indonesia Frinsa Lactic",
+        "description": "",
+        "price": "3662.00",
+        "kind": 1,
+        "roast_level": 11,
+        "origin": 8,
+        "methods": [1, 2, 4]
+      }
+    }
+  ]
