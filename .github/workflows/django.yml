@@ -34,7 +34,6 @@ jobs:
         pip install coverage
         cd mysite
         coverage run manage.py test
+        cp .coverage ./.coverage
     - name: Upload Coverage to Codecov
-      run: |
-        cd mysite
       uses: codecov/codecov-action@v2
