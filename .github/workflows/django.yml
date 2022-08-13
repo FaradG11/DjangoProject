@@ -35,4 +35,6 @@ jobs:
         cd mysite
         coverage run manage.py test
     - name: Upload Coverage to Codecov
+      run: |
+        cd mysite
       uses: codecov/codecov-action@v2
